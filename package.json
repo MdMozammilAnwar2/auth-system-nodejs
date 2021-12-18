@@ -1,0 +1,22 @@
+{
+  "name": "auth-system",
+  "version": "1.0.0",
+  "description": "this application will be fully fledge authentication system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Md Mozammil Anwar",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
