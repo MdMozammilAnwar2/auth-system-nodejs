@@ -10,6 +10,28 @@ const app=express();
 app.use(express.json());
 app.use(cookiesParser());
 
+let courses=[
+        {       
+                course_id:101,
+                course:'Angular',
+                fee:299
+        },
+        {       
+                course_id:102,
+                course:'react js',
+                fee:399
+        },
+        {       
+                course_id:103,
+                course:'spring boot',
+                fee:1299
+        },
+        {       
+                course_id:104,
+                course:'PostgreSQL',
+                fee:999
+        }
+]
 app.get("/",(req,res)=>{
     res.send({result:"SUCCESS",data:"Welcome to the auth-system"})
 });
@@ -97,7 +119,7 @@ app.post("/login", async (req,res)=>{
 app.get("/dashboard", auth , (req,res)=>{
     res.status(200).send({result:"success",message:"welcome to the auth-system"});
 })
-// app.get("/dashboard", auth, (req, res) => {
-//     res.send("Welcome to secret information");
-//   });
+app.get("/courses", auth, (req,res)=>{
+    res.status(200).send({result:"SUCCESS",data:courses});
+})
 module.exports = app
